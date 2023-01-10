@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position Relative</title>
+    <style>
+      body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      .element-relative {
+        border: 2px solid red;
+        position: relative;
+        /* lo possiamo scostare dalla sua posizione statica */
+        /* top, bottom, left, right */
+        left: 100px;
+        top: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>POSITION: RELATIVE</h1>
+    <p>
+      Un elemento con valore relative su position può essere posizionato
+      relativamente rispetto alla sua posiziona normale
+    </p>
+    <div class="element-relative">Questo è un div posizionato con relative</div>
+  </body>
+</html>

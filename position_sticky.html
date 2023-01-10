@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position Sticky</title>
+    <style>
+      body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      .element-sticky {
+        border: 3px solid green;
+        padding: 5px;
+        background-color: lightgreen;
+        position: sticky;
+        top: 20px;
+      }
+
+      h1 {
+        font-size: 3em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>POSITION: STICKY</h1>
+    <div class="element-sticky">Questo elemento si ancorerà in cima!</div>
+    <p>
+      Un elemento con position:sticky viene posizionato in base al quantitativo
+      di scroll. Raggiunta la posizione predisposta, si "incollerà" e ritornerà
+      alla posizione originale solamente invertito lo scroll. Possiamo
+      immaginarlo come la fusione di 2 proprietà: 1) l'elemento inizialmente
+      scorre come se fosse un position:relative, fino a raggiungere il punto di
+      threshold. 2) una volta raggiunto il punto limite l'elemento si comporta
+      come un position:fixed, rimanendo ancorato ad una certa posizione della
+      viewport.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quas
+      accusantium consequuntur illo facilis corrupti saepe, iure delectus sed
+      repellendus porro velit provident ullam vitae minima neque magni, nisi
+      earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quas
+      accusantium consequuntur illo facilis corrupti saepe, iure delectus sed
+      repellendus porro velit provident ullam vitae minima neque magni, nisi
+      earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quas
+      accusantium consequuntur illo facilis corrupti saepe, iure delectus sed
+      repellendus porro velit provident ullam vitae minima neque magni, nisi
+      earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quas
+      accusantium consequuntur illo facilis corrupti saepe, iure delectus sed
+      repellendus porro velit provident ullam vitae minima neque magni, nisi
+      earum.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quas
+      accusantium consequuntur illo facilis corrupti saepe, iure delectus sed
+      repellendus porro velit provident ullam vitae minima neque magni, nisi
+      earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quas
+      accusantium consequuntur illo facilis corrupti saepe, iure delectus sed
+      repellendus porro velit provident ullam vitae minima neque magni, nisi
+      earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quas
+      accusantium consequuntur illo facilis corrupti saepe, iure delectus sed
+      repellendus porro velit provident ullam vitae minima neque magni, nisi
+      earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quas
+      accusantium consequuntur illo facilis corrupti saepe, iure delectus sed
+      repellendus porro velit provident ullam vitae minima neque magni, nisi
+      earum.
+    </p>
+  </body>
+</html>

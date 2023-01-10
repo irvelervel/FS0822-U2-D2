@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float Exercises</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        background-color: lightgray;
+        margin: 0;
+      }
+
+      .container {
+        width: 800px;
+        margin: 0 auto;
+        border: 1px solid black;
+      }
+
+      header {
+        background-color: mediumblue;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        padding-top: 10px;
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      nav {
+        margin-top: 10px;
+        background-color: lightskyblue;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      ul li {
+        display: inline;
+        padding: 0 20px;
+      }
+
+      ul li a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      #img-left {
+        width: 250px;
+        float: left;
+
+        /* la proprietà float ROMPE il normale flow della pagina: display block o inline etc.
+        non determineranno più i blocchi di contenuto ma gli elementi saranno liberi
+        di fluttuare liberamente a dx o a sx. NB: gli elementi marcati come float
+        NON CONTRIBUIRANNO PIÙ all'altezza del proprio contenitore */
+
+        margin-right: 10px;
+      }
+
+      #img-right {
+        width: 250px;
+        float: right;
+        margin-left: 10px;
+      }
+
+      aside img {
+        width: 100%;
+      }
+
+      section {
+        /* float: right; */
+        /* questa è una soluzione sbagliata, sempre applicare float all'elemento
+        con la minore altezza in modo che l'elemento sibling che vi si disporrà
+        affianco possa determinare l'altezza del contenitore */
+      }
+
+      footer {
+        text-align: center;
+        background-color: lightpink;
+        clear: both; /* basterebbe anche clear: left perchè il float era a left*/
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      section p img {
+        width: 50px;
+        float: left;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>EPICODE</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">HTML</a>
+            </li>
+            <li>
+              <a href="#">CSS</a>
+            </li>
+            <li>
+              <a href="#">JAVASCRIPT</a>
+            </li>
+            <li>
+              <a href="#">TYPESCRIPT</a>
+            </li>
+            <li>
+              <a href="#">REACT</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <aside id="img-left">
+          <img src="https://placekitten.com/500" alt="kitten picture" />
+        </aside>
+        <aside id="img-right">
+          <img src="https://placekitten.com/500" alt="kitten picture" />
+        </aside>
+        <!-- IMPORTANTE! tutti gli elementi flottanti di un contenitore
+        vanno inseriti nell'HTML prima degli elementi liberi, che in questo
+        modo andranno a disporsi nello spazio disponibile -->
+        <section>
+          <p>
+            <img src="https://placekitten.com/200" alt="kitten picture" />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </section>
+      </main>
+      <footer>
+        <p>EPICODE</p>
+      </footer>
+    </div>
+  </body>
+</html>
